@@ -14,6 +14,12 @@
 {
     font-weight: 500;
     border-radius: 10px;
+    transition: .2s;
+}
+
+.btn-primary:hover
+{
+    transform: scale(1.1);
 }
 
 .my-btn-login
@@ -22,18 +28,20 @@
     border: #777777 solid 2px;
     border-radius: 10px;
     color:  #c7c4c4;
-}
-
-.btn-size
-{
-    height:38px;
-    width:85px;
+    transition: .3s;
 }
 
 .my-btn-login:hover
 {
     background-color: #777777;
     color:rgb(52, 58, 64);
+    transform: scale(1.1);
+}
+
+.btn-size
+{
+    height:38px;
+    width:85px;
 }
 
 .my-btn-explore
@@ -43,6 +51,13 @@
     width:150px;
     border-radius: 40px;
     margin-top: 10px;
+    transition: .2s;
+}
+
+.my-btn-explore:hover
+{
+    background-color: #81799e;
+    transform: scale(1.1);
 }
 
 .my-btn-explore .explore-text
