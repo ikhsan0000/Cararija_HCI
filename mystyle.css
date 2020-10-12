@@ -1,12 +1,27 @@
 *
 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body
+{
+    background-color: rgb(52, 58, 64);
+    color: #c7c4c4;
+}
+
+.navbar
+{
+    padding-left: 50px;
 }
 
 .title-logo
 {
-    letter-spacing: 5px;
+    font-size: 15pt;
+    font-weight: 300;
+    letter-spacing: 8px;
 }
+
 
 .navbar
 {
