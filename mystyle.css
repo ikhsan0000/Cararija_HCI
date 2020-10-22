@@ -3,7 +3,6 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 12px;
-    border: red solid;
 }
 
 .check
@@ -21,7 +20,8 @@
 .btn-primary:hover
 {
     transform: scale(1.1);
-	background-color:  	#FFB6C1;
+    background-color: #FFB6C1;
+    border: #FFB6C1 solid;
 }
 
 .my-btn-login
@@ -115,6 +115,38 @@ body
 
 .logo-bg
 {
-    width: 800px;
+    width: 600px;
     z-index: -1;
+    float: right;
+    margin-top: -250px;
+}
+
+#home-page
+{
+    -webkit-transition: -webkit-transform .3s ease-in;
+}
+
+.swipe-left
+{
+    -webkit-transform:translateX(-1500px);
+}
+
+
+/* LOGIN LAYOUT */
+
+.hide
+{
+    display: hide;
+}
+
+.login-layout
+{
+    opacity: 0%;
+    margin-top: -300px;
+    -webkit-transform:translateX(1500px);
+    -webkit-transition: -webkit-transform .6s ease-out;
+}
+.login-swipe-left
+{
+    -webkit-transform:translateX(-100px);
 }
