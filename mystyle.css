@@ -115,7 +115,6 @@ body
 
 .logo-bg
 {
-    display: block;
-    width: 400px;
+    width: 800px;
     z-index: -1;
 }
