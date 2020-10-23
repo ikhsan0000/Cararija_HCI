@@ -1,5 +1,5 @@
 # Cararija_HCI
-Created by \
+Created by 
 <li>
 Galih Damar Jati    1706043084
 Hizkia William Eben 1706042806
