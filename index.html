@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b107706b66.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Google Fonts -->
       <!-- Poppins -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..800&display=swap" rel="stylesheet">
@@ -62,9 +65,63 @@
 
   </div> <!-- Container End -->
 
-  <div class="container login-layout hide" id="login-layout">
-    <span class="headline" id="test">Lorem, ipsum dolor.</span>
-  </div>
+  <div class="login-layout hide" id="login-layout">
+    
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use E-Mail</span>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Password">
+        <button>Sign Up</button>
+      </form>  
+    </div>
+
+    <div class="form-container login-container">
+      <form action="#">
+        <h1>Login</h1>
+        <div class="social-container">
+          <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use E-Mail</span>
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Password">
+        <a href="#">Forgot your password?</a>
+        <button>Sign Up</button>
+      </form>  
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        
+        <div class="overlay-panel left-panel">
+          <h1>You're back!</h1>
+          <p>
+            Please login here
+          </p>
+          <button class="ghost" id="login">Login</button>
+        </div>
+
+        <div class="overlay-panel right-panel">
+          <h1>Hey There!</h1>
+          <p>
+            Join us here
+          </p>
+          <button class="ghost" id="signup">Login</button>
+        </div>
+        
+      </div>
+    </div>
+
+  </div> <!-- Login Box End -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
@@ -78,6 +135,13 @@
       $("#login-layout").removeClass("hide")
       $("#login-layout").addClass("login-swipe-left")
       $("#login-layout").animate({opacity: '100%'}, 300)
+    });
+
+    $("#signup").click(function(){
+      $("#login-layout").addClass("right-panel-active")
+    });
+    $("#login").click(function(){
+      $("#login-layout").removeClass("right-panel-active")
     });
   </script>
 </html>
