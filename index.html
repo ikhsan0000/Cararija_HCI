@@ -95,7 +95,7 @@
         <input type="email" placeholder="E-mail">
         <input type="password" placeholder="Password">
         <a href="#">Forgot your password?</a>
-        <button>Sign Up</button>
+        <button>Login</button>
       </form>  
     </div>
 
@@ -115,7 +115,7 @@
           <p>
             Join us here
           </p>
-          <button class="ghost" id="signup">Login</button>
+          <button class="ghost" id="signup">Sign up</button>
         </div>
         
       </div>
@@ -143,5 +143,9 @@
     $("#login").click(function(){
       $("#login-layout").removeClass("right-panel-active")
     });
+
+    $("#register-btn").click(function(){
+      $("#login-layout").addClass("right-panel-active");
+    })
   </script>
 </html>
