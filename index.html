@@ -65,7 +65,7 @@
 
   </div> <!-- Container End -->
 
-  <div class="login-layout" id="login-layout" style="display: ;">
+  <div class="login-layout" id="login-layout" style="display: none">
     <i class="fas fa-arrow-left fa-2x back-icon" id="back-arrow"></i>
     <div class="form-container sign-up-container">
       <form>
@@ -131,9 +131,9 @@
   <script>
  
     $("#login-btn, #register-btn").click(function(){
+      $('#login-layout').removeAttr("style");
       $("#home-page").addClass('swipe-left')
       $("#home-page").animate({opacity: 0}, 300)
-      $("#login-layout").removeClass("hide")
       $("#login-layout").addClass("login-swipe-left")
       $("#login-layout").animate({opacity: '100%'}, 300)
     });
@@ -143,7 +143,9 @@
       $("#home-page").animate({opacity: '100%'}, 300)
       $("#login-layout").addClass("hide")
       $("#login-layout").removeClass("login-swipe-left")
-      $("#login-layout").animate({opacity: 0}, 300)
+      $("#login-layout").animate({opacity: 0}, 300, function(){
+        $("#login-layout").attr("style", "display:none;")
+      })
     });
 
     $("#signup").click(function(){
