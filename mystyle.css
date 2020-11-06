@@ -283,6 +283,11 @@ body
     transition: transform 80ms ease-in;
 }
 
+.login-layout button:hover
+{
+    transform: scale(1.05);
+}
+
 .login-layout button:active
 {
     transform: scale(.95);
