@@ -68,7 +68,7 @@
   <div class="login-layout hide" id="login-layout">
     
     <div class="form-container sign-up-container">
-      <form action="#">
+      <form>
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -76,15 +76,15 @@
           <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Password">
-        <button>Sign Up</button>
-      </form>  
+        <input type="text" placeholder="Name" id="register_name">
+        <input type="email" placeholder="E-mail" id="register_password">
+        <input type="password" placeholder="Password" id="register_password">
+        <button id="register_btn">Sign Up</button>
+      </form>
     </div>
 
     <div class="form-container login-container">
-      <form action="#">
+      <form>
         <h1>Login</h1>
         <div class="social-container">
           <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -92,10 +92,11 @@
           <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Password">
+        <input type="email" placeholder="E-mail" id="login_email">
+        <input type="password" placeholder="Password" id="login_password">
+        <p>adasdasdasdasd</p>
         <a href="#">Forgot your password?</a>
-        <button>Login</button>
+        <button id="login_btn">Login</button>
       </form>  
     </div>
 
@@ -147,5 +148,41 @@
     $("#register-btn").click(function(){
       $("#login-layout").addClass("right-panel-active");
     })
+
+    // LOGIN & REGISTER
+
+    console.log($("#login_password").get(0));
+
+    $(document).ready(function(){
+    // LOGIN ACTION
+      $("#login_btn").click(function(e){
+        e.preventDefault();
+        var login_email = $("#login_email").val();
+        var password_id = $("#login_password").val();
+
+        if(login_email == "cararija@gmail.com" && password_id == "admin123")
+        {
+          console.log(login_email);
+          console.log(password_id);
+          window.location.replace("/user.html")
+
+        }
+        else
+        {
+          console.log("salah jing");
+          console.log(login_email);
+          console.log(password_id);
+        }
+      });
+
+    // REGISTER ACTION
+      $("#register_btn").click(function(e){
+        e.preventDefault();
+        window.location.replace("/user.html")
+      });
+
+    });
+    
+
   </script>
 </html>
