@@ -65,19 +65,19 @@
 
   </div> <!-- Container End -->
 
-  <div class="login-layout hide" id="login-layout">
-    
+  <div class="login-layout" id="login-layout" style="display: ;">
+    <i class="fas fa-arrow-left fa-2x back-icon" id="back-arrow"></i>
     <div class="form-container sign-up-container">
       <form>
         <h1>Create Account</h1>
         <div class="social-container">
-          <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.w3schools.com" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="text" placeholder="Name" id="register_name">
-        <input type="email" placeholder="E-mail" id="register_password">
+        <input type="text" placeholder="Name" id="register_name" required>
+        <input type="email" placeholder="E-mail" id="register_password" required>
         <input type="password" placeholder="Password" id="register_password">
         <button id="register_btn">Sign Up</button>
       </form>
@@ -87,14 +87,14 @@
       <form>
         <h1>Login</h1>
         <div class="social-container">
-          <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.w3schools.com" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="email" placeholder="E-mail" id="login_email">
-        <input type="password" placeholder="Password" id="login_password">
-        <p>adasdasdasdasd</p>
+        <input type="email" placeholder="E-mail" id="login_email" required>
+        <input type="password" placeholder="Password" id="login_password" required>
+        <p class="error-notification">adasdasdasdasd</p>
         <a href="#">Forgot your password?</a>
         <button id="login_btn">Login</button>
       </form>  
@@ -136,6 +136,14 @@
       $("#login-layout").removeClass("hide")
       $("#login-layout").addClass("login-swipe-left")
       $("#login-layout").animate({opacity: '100%'}, 300)
+    });
+
+    $("#back-arrow").click(function(){
+      $("#home-page").removeClass('swipe-left')
+      $("#home-page").animate({opacity: '100%'}, 300)
+      $("#login-layout").addClass("hide")
+      $("#login-layout").removeClass("login-swipe-left")
+      $("#login-layout").animate({opacity: 0}, 300)
     });
 
     $("#signup").click(function(){

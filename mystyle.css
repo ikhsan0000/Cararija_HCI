@@ -123,8 +123,8 @@ body
 
 #home-page
 {
-    -webkit-transition: -webkit-transform .45s ease-in;
-    -moz-transition: -webkit-transform .45s ease-in;
+    -webkit-transition: -webkit-transform .45s ease-in-out;
+    -moz-transition: -webkit-transform .45s ease-in-out;
 }
 
 .swipe-left
@@ -138,7 +138,7 @@ body
 
 .hide
 {
-    display: hide;
+    display: none;
 }
 
 .login-layout
@@ -170,6 +170,16 @@ body
     -moz-transition: -webkit-transform .45s ease-out
 
 
+}
+
+.login-layout .back-icon
+{
+    position: absolute;
+    z-index: 9999;
+    margin-left: 20px;
+    margin-top: 15px;
+    color:#d1d1d1;
+    cursor: pointer;
 }
 
 .login-swipe-left
@@ -233,6 +243,13 @@ body
     margin: 0 5px;
     height: 40px;
     width: 40px;
+    transition: .3s;
+}
+
+.social-container a:hover
+{
+    background-color: #5e536d;
+    transform: scale(1.2);
 }
 
 .form-container input
