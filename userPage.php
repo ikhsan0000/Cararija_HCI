@@ -125,7 +125,7 @@
                     <p class="card-title">Google</p>
                     <p class="card-subtitle">Apply before: 15/11/2020</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body ml-3">
 
                     <div class="card-req">
                         <div class="card-icon">
