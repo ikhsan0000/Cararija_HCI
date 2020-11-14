@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/register-login-box.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b107706b66.js" crossorigin="anonymous"></script>
@@ -65,6 +66,8 @@
 
   </div> <!-- Container End -->
 
+
+  <!-- Login-Register Box Start -->
   <div class="login-layout" id="login-layout" style="display: none">
     <i class="fas fa-arrow-left fa-2x back-icon" id="back-arrow"></i>
     <div class="form-container sign-up-container">
@@ -84,7 +87,7 @@
     </div>
 
     <div class="form-container login-container">
-      <form>
+      <form onsubmit="loginFunc()">
         <h1>Login</h1>
         <div class="social-container">
           <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -94,7 +97,7 @@
         <span>or use E-Mail</span>
         <input type="email" placeholder="E-mail" id="login_email" required>
         <input type="password" placeholder="Password" id="login_password" required>
-        <p class="error-notification">adasdasdasdasd</p>
+        <div class="error-notification">Please Input Your Email/Password</div>
         <a href="#">Forgot your password?</a>
         <button id="login_btn">Login</button>
       </form>  
@@ -163,10 +166,10 @@
 
     console.log($("#login_password").get(0));
 
-    $(document).ready(function(){
-    // LOGIN ACTION
+    function loginFunc()
+    {
       $("#login_btn").click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         var login_email = $("#login_email").val();
         var password_id = $("#login_password").val();
 
@@ -182,6 +185,27 @@
           console.log("salah jing");
           console.log(login_email);
           console.log(password_id);
+        }
+      });
+    }
+
+    $(document).ready(function(){
+    // LOGIN ACTION
+      $("#login_btn").click(function(e){
+        e.preventDefault();
+        var login_email = $("#login_email").val();
+        var password_id = $("#login_password").val();
+
+        if(login_email == "cararija@gmail.com" && password_id == "admin123")
+        {
+          console.log(login_email);
+          console.log(password_id);
+          window.location.replace("userPage.html")
+
+        }
+        else
+        {
+          
         }
       });
 
