@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/card.css">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b107706b66.js" crossorigin="anonymous"></script>
@@ -17,35 +23,48 @@
 
       <!-- JQ -->
       <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </head>
 <body>
+  <!-- PHP POST -->
+  <?php
+    $username = $_POST["post_username"];
+  ?>
     <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
       <a class="navbar-brand title-logo" href="#">CARARIJA</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active mr-5">
+          <li class="nav-item mr-5">
             <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item mr-5">
             <a class="nav-link" href="#">LINK</a>
           </li>
-
-          <button type="button" class="btn my-btn-login mr-5 btn-size" id="login-btn">LOGIN</button>
-
-          <button type="button" class="btn btn-primary btn-size" id="register-btn">REGISTER</button>
           
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle pr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Welcome, <?=$username?>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-cog"></i> Preferences</span></a>
+                    <a class="dropdown-item" href="#"><span><i class="far fa-envelope"></i> Contact Support</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.php"><span><i class="fas fa-power-off"></i> Log Out</span></a>
+                </div>
+            </li>
         </ul>
       </div>
+      
     </nav>
     <!-- Bootstrap Navbar End  -->
+  
+  </div>
 
 </body>
 </html>

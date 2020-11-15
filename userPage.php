@@ -51,7 +51,7 @@
                     <a class="dropdown-item" href="#"><span><i class="fas fa-cog"></i> Preferences</span></a>
                     <a class="dropdown-item" href="#"><span><i class="far fa-envelope"></i> Contact Support</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html"><span><i class="fas fa-power-off"></i> Log Out</span></a>
+                    <a class="dropdown-item" href="index.php"><span><i class="fas fa-power-off"></i> Log Out</span></a>
                 </div>
             </li>
         </ul>
@@ -68,11 +68,28 @@
             <li>
                 <a class="sidebarCollapse"><i class="fas fa-arrow-left fa-2x" id="back-arrow"></i></a>
             </li>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employment Type</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="#">Home 1</a>
+                        <div class="custom-control custom-radio ml-5 mt-3 mb-3">
+                            <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+                            <label class="custom-control-label" for="customRadio">All</label>
+                            
+                            <br class="mb-1">
+                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
+                            <label class="custom-control-label" for="customRadio">Part-Time</label>
+                            
+                            <br class="mb-1">
+                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
+                            <label class="custom-control-label" for="customRadio">Full-Time</label>
+                            
+                            <br class="mb-1">
+                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
+                            <label class="custom-control-label" for="customRadio">Internship</label>
+                                                        
+                          
+                        </div>
                     </li>
                     <li>
                         <a href="#">Home 2</a>

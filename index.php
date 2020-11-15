@@ -72,7 +72,7 @@
   <div class="login-layout" id="login-layout" style="display: none">
     <i class="fas fa-arrow-left fa-2x back-icon" id="back-arrow"></i>
     <div class="form-container sign-up-container">
-      <form>
+      <form action="registerDetail.php" method="POST">
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -80,8 +80,8 @@
           <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="text" placeholder="Name" id="register_name" required>
-        <input type="email" placeholder="E-mail" id="register_password" required>
+        <input type="text" placeholder="Username" id="register_name" name="post_username" required>
+        <input type="email" placeholder="E-mail" id="register_email" name="post_email" required>
         <input type="password" placeholder="Password" id="register_password">
         <button id="register_btn">Sign Up</button>
       </form>
@@ -221,17 +221,23 @@
 
       });
 
-    $("#explore").click(function(e){
-      e.preventDefault();
-      var err_msg = '<div class="error-notification" id="error-notification"> Please Login First !</div>';
-      $("#error-notification").remove();
-      $("#login_password").after(err_msg);
-    })
-
-    // REGISTER ACTION
-      $("#register_btn").click(function(e){
+      $("#explore").click(function(e){
         e.preventDefault();
-        window.location.replace("/user.html")
+        var err_msg = '<div class="error-notification" id="error-notification"> Please Login First !</div>';
+        $("#error-notification").remove();
+        $("#login_password").after(err_msg);
+      })
+
+      $("#register_btn").click(function(e){
+        var err_msg_reg = '<div class="error-notification" id="error-notification-register"> Please input all forms</div>';
+        reg_username = $("#register_name").val();
+        reg_email = $("#register_email").val();
+        reg_password = $("#register_password").val();
+        if(reg_username == "" || reg_email == "" || reg_password == "")
+        {
+          $("#error-notification-register").remove();
+          $("#register_password").after(err_msg_reg);
+        }
       });
 
     });
