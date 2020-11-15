@@ -14,7 +14,7 @@ Based on: HTML, CSS, JavaScript, PHP
 
 ## Screenshot Tampilan Web
 Laman awal
-
+![Page](Screenshot/Page.png)
 
 Laman login
 ![Login](Screenshot/Login.png)
