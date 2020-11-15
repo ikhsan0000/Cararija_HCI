@@ -1,0 +1,36 @@
+fieldset
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.form-group
+{
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.input-group input.form-control
+{
+    background-color: #3a383d;
+    border: none;
+    color: #d1d1d1;
+    height: 35px;
+}
+
+.registration-form-card
+{
+    align-items: center;
+    margin: -20px auto;
+    background-color: #141a20;
+    border-radius: 2.5%;
+    box-shadow: 0 0 5px #1b1724;
+    padding: 10px 0;
+    width: 1000px;
+    height: fit-content;
+    background-color: black;
+}

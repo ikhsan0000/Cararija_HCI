@@ -23,31 +23,36 @@
 <body>
   <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-      <a class="navbar-brand title-logo" href="index.php">
-        <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
-        CARARIJA
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+        <a class="navbar-brand title-logo" href="index_login.php">
+            <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
+            CARARIJA
+         </a>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active mr-5">
+          <li class="nav-item mr-5">
             <a class="nav-link" href="index.php">HOME<span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item mr-5">
             <a class="nav-link" href="#">LINK</a>
           </li>
-
-          <button type="button" class="btn my-btn-login mr-5 btn-size" id="login-btn">LOGIN</button>
-
-          <button type="button" class="btn btn-primary btn-size" id="register-btn">REGISTER</button>
           
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle pr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Welcome, Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-cog"></i> Preferences</span></a>
+                    <a class="dropdown-item" href="#"><span><i class="far fa-envelope"></i> Contact Support</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.php"><span><i class="fas fa-power-off"></i> Log Out</span></a>
+                </div>
+            </li>
         </ul>
       </div>
+      
     </nav>
     <!-- Bootstrap Navbar End  -->
 
@@ -135,97 +140,9 @@
 </body>
 
   <script>
- 
-    $("#login-btn, #register-btn, #explore").click(function(){
-      $('#login-layout').removeAttr("style");
-      $("#home-page").addClass('swipe-left')
-      $("#home-page").animate({opacity: 0}, 300)
-      $("#login-layout").addClass("login-swipe-left")
-      $("#login-layout").animate({opacity: '100%'}, 300)
-    });
-
-    $("#back-arrow").click(function(){
-      $("#home-page").removeClass('swipe-left')
-      $("#home-page").animate({opacity: '100%'}, 300)
-      $("#login-layout").addClass("hide")
-      $("#login-layout").removeClass("login-swipe-left")
-      $("#login-layout").animate({opacity: 0}, 300, function(){
-        $("#login-layout").attr("style", "display:none;")
-      })
-    });
-
-    $("#signup").click(function(){
-      $("#login-layout").addClass("right-panel-active")
-    });
-    $("#login, #explore").click(function(){
-      $("#login-layout").removeClass("right-panel-active")
-    });
-
-    $("#register-btn").click(function(){
-      $("#login-layout").addClass("right-panel-active");
-    })
-    $("#login-btn, #explore").click(function(){
-      $("#login-layout").removeClass("right-panel-active");
-    })
-
-    // LOGIN & REGISTER
-
-    $(document).ready(function(){
-    // LOGIN ACTION
-      $("#login_btn").click(function(e){
+    $("#explore").click(function(e){
         e.preventDefault();
-        var login_email = $("#login_email").val();
-        var password_id = $("#login_password").val();
-        var err_msg = '<div class="error-notification" id="error-notification">';
-
-        if(login_email == "cararija@gmail.com" && password_id == "admin123")
-        {
-          console.log(login_email);
-          console.log(password_id);
-          window.location.replace("userPage.php");
-
-        }
-        else if(login_email === "" || password_id === "")
-        {
-          err_msg = err_msg+"Please Input Your Email/Password</div>";
-          $("#error-notification").remove();
-          $("#login_password").after(err_msg);
-          console.log(err_msg);
-        }
-        else
-        {
-          err_msg = err_msg+"Wrong Email/Password, Please try again</div>";
-          $("#error-notification").remove();
-          $("#login_password").after(err_msg);
-          console.log(err_msg);
-        }
-
-      });
-
-      $("#explore").click(function(e){
-        e.preventDefault();
-        var err_msg = '<div class="error-notification" id="error-notification"> Please Login First !</div>';
-        $("#error-notification").remove();
-        $("#login_password").after(err_msg);
+        window.location.replace("userPage.php")
       })
-
-      $("#register_btn").click(function(e){
-        var err_msg_reg = '<div class="error-notification" id="error-notification-register"> Please input all forms</div>';
-        reg_username = $("#register_name").val();
-        reg_email = $("#register_email").val();
-        reg_password = $("#register_password").val();
-        if(reg_username == "" || reg_email == "" || reg_password == "")
-        {
-          $("#error-notification-register").remove();
-          $("#register_password").after(err_msg_reg);
-        }
-      });
-
-    });
-
-
-
-    
-
   </script>
 </html>

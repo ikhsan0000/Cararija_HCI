@@ -129,6 +129,10 @@ ul.CTAs .btn{
     margin: auto;
     border-style: none;
     outline: none;
+    box-shadow: none;
+    margin-bottom: 7px;
+    min-width: 60px;
+    min-height: 25px;
 }
 .back-icon-container
 {

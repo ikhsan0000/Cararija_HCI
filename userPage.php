@@ -31,15 +31,16 @@
     <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-        <a class="navbar-brand title-logo" href="#">
+        <a class="navbar-brand title-logo" href="index_login.php">
             <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
             CARARIJA
          </a>
+         
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mr-5">
-            <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index_login.php">HOME<span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item mr-5">
@@ -141,7 +142,6 @@
                         </div>
                        
                         <button type="button" class="btn btn-secondary">Update</button>
-                        <br>
                         <button type="button" class="btn btn-outline btn-secondary">Reset</button>
                     </li>                 
                 </ul>
