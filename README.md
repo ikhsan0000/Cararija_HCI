@@ -1,7 +1,7 @@
 # Cararija_HCI
 Created by 
 
-- Galih Damar Jati    1706043084
+- **Galih Damar Jati    1706043084** Ketua kelompok
 - Hizkia William Eben 1706042806
 - Ikhsan Firdauz      1706985981
 
