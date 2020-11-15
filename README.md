@@ -29,6 +29,7 @@ Laman page utama
 ![Job](Screenshot/Job.png)
 
 Laman filter pekerjaan
+
 ![JobFilter](Screenshot/JobFilter.png)
 
 ## Installation
@@ -41,6 +42,8 @@ Berikut cara untuk menjalankan program ini:
 6. Jalankan XAMPP dan nyalakan module Apache.
 7. Masukan http://localhost/Cariraja/ pada URL bar browser yang digunakan.
 8. Jika berhasil akan muncul tampilan seperti berikut.
+![Page](Screenshot/Page.png)
+
 
 ## License
 <details>
