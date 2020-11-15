@@ -64,9 +64,9 @@ a:focus {
     background: #6d7fcc;
 }
 
-#sidebar ul.components {
+/* #sidebar ul.components {
     border-bottom: 1px solid #47748b;
-}
+} */
 
 #sidebar ul p {
     color: #fff;
@@ -108,10 +108,8 @@ ul ul a {
     background: #6d7fcc;
 }
 
-ul.CTAs {
-}
 
-ul.CTAs a {
+ul.CTAs a{
     text-align: center;
     font-size: 0.9em !important;
     display: block;
@@ -119,6 +117,19 @@ ul.CTAs a {
     /* margin-bottom: 5px; */
 }
 
+ul.CTAs .btn{
+    background-color: #5b53cf;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 2px;
+    margin: auto;
+    border-style: none;
+    outline: none;
+}
 .back-icon-container
 {
     border: 1px solid #d1d1d1;

@@ -24,7 +24,10 @@
   <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-      <a class="navbar-brand title-logo" href="#">CARARIJA</a>
+      <a class="navbar-brand title-logo" href="#">
+        <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
+        CARARIJA
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,8 +79,8 @@
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.w3schools.com" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.linkedin.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
         <input type="text" placeholder="Username" id="register_name" name="post_username" required>
@@ -92,8 +95,8 @@
         <h1>Login</h1>
         <div class="social-container">
           <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.w3schools.com" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.linkedin.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
         <input type="email" placeholder="E-mail" id="login_email">

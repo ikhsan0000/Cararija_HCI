@@ -31,7 +31,10 @@
     <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-      <a class="navbar-brand title-logo" href="#">CARARIJA</a>
+        <a class="navbar-brand title-logo" href="#">
+            <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
+            CARARIJA
+         </a>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
@@ -68,70 +71,81 @@
             <li>
                 <a class="sidebarCollapse"><i class="fas fa-arrow-left fa-2x" id="back-arrow"></i></a>
             </li>
+
             <li>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employment Type</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+                <ul class="collapse list-unstyled" id="homeSubmenu" style="border-bottom: #6d7fcc solid">
                     <li>
-                        <div class="custom-control custom-radio ml-5 mt-3 mb-3">
-                            <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
-                            <label class="custom-control-label" for="customRadio">All</label>
-                            
-                            <br class="mb-1">
-                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
-                            <label class="custom-control-label" for="customRadio">Part-Time</label>
-                            
-                            <br class="mb-1">
-                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
-                            <label class="custom-control-label" for="customRadio">Full-Time</label>
-                            
-                            <br class="mb-1">
-                            <input type="radio" class="custom-control-input mb-2" id="customRadio" name="example1" value="customEx">
-                            <label class="custom-control-label" for="customRadio">Internship</label>
-                                                        
-                          
+                        <div class="custom-control custom-radio mt-3 ml-5">
+                            <input type="radio" class="custom-control-input" id="customRadio1" name="E_radio" checked>
+                            <label class="custom-control-label" for="customRadio1">All</label>
                         </div>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
+                        
+                        <div class="custom-control custom-radio mt-3 ml-5">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="E_radio">
+                            <label class="custom-control-label" for="customRadio2">Part-Time</label>
+                        </div>
+                            
+                        <div class="custom-control custom-radio mt-3 ml-5">
+                            <input type="radio" class="custom-control-input" id="customRadio3" name="E_radio">
+                            <label class="custom-control-label" for="customRadio3">Full-Time</label>
+                        </div>
+                            
+                        <div class="custom-control custom-radio mt-3 ml-5 mb-3">
+                            <input type="radio" class="custom-control-input" id="customRadio4" name="E_radio">
+                            <label class="custom-control-label" for="customRadio4">Internship</label>
+                        </div>
+                    </li>                 
                 </ul>
             </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
 
-        <ul class="list-unstyled CTAs">
             <li>
-                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                <a href="#skillSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Skill needed</a>
+                <ul class="collapse list-unstyled" id="skillSubmenu" style="border-bottom: #6d7fcc solid">
+                    <li>
+                        <div class="custom-control custom-checkbox mt-3 ml-5">
+                            <input type="checkbox" class="custom-control-input" id="customcheck1" name="S_radio">
+                            <label class="custom-control-label" for="customcheck1">Accounting</label>
+                        </div>
+                        
+                        <div class="custom-control custom-checkbox mt-3 ml-5">
+                            <input type="checkbox" class="custom-control-input" id="customcheck2" name="S_radio">
+                            <label class="custom-control-label" for="customcheck2">Programming</label>
+                        </div>
+                            
+                        <div class="custom-control custom-checkbox mt-3 ml-5">
+                            <input type="checkbox" class="custom-control-input" id="customcheck3" name="S_radio">
+                            <label class="custom-control-label" for="customcheck3">Law</label>
+                        </div>
+                            
+                        <div class="custom-control custom-checkbox mt-3 ml-5 mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customcheck4" name="S_radio">
+                            <label class="custom-control-label" for="customcheck4">HR</label>
+                        </div>
+                    </li>                 
+                </ul>
             </li>
+
             <li>
-                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                <a href="#salarySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Salary</a>
+                <ul class="collapse list-unstyled" id="salarySubmenu" style="border-bottom: #6d7fcc solid">
+                    <li>
+                        <div class="form-group mt-3 ml-3 mr-4">
+                            <label for="min">Min :</label>
+                            <input type="number" class="form-control" id="min">
+                        </div>
+                        
+                        <div class="form-group mt-3 ml-3 mr-4">
+                            <label for="max">Max :</label>
+                            <input type="number" class="form-control" id="max">
+                        </div>
+                       
+                        <button type="button" class="btn btn-secondary">Update</button>
+                        <br>
+                        <button type="button" class="btn btn-outline btn-secondary">Reset</button>
+                    </li>                 
+                </ul>
             </li>
-        </ul>
     </nav>
 
     
@@ -163,7 +177,7 @@
                         <div class="card-icon">
                                 <i class="fas fa-dollar-sign fa-3x card-icon"></i>    
                             </div>
-                            <p class="icon-title">Sallary:</p>
+                            <p class="icon-title">Salary:</p>
                             <p class="icon-description">$50k</p>
                     </div>
 
