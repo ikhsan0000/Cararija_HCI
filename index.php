@@ -58,7 +58,7 @@
        Rileks Aja
     </span>
     <p class="general-text inline-flex">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo accusamus quod aliquid id explicabo enim, illum expedita! Temporibus, reiciendis! Quod, natus perferendis. Non suscipit labore eius facilis dignissimos natus nisi sit quisquam voluptate nam eum sint dolores voluptatibus eveniet, rerum optio illo sed maiores hic vero magnam minima corporis? Enim!
+      Sedang ingin mencari penghasilan tambahan? Atau ingin mencari tempat magang untuk keperluan kuliah? Cararija solusinya!
     </p>
     
     <img src="assets/logo2.png" alt="logo" class="logo-bg inline-flex">
