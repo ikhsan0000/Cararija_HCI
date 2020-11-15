@@ -33,11 +33,13 @@
   <!-- PHP POST -->
   <?php
     $username = $_POST["post_username"];
+    $email = $_POST["post_email"];
+    $password = $_POST["post_password"];
   ?>
     <!-- Bootstrap Navbar Start  -->
   <div class="container" id="home-page">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-      <a class="navbar-brand title-logo" href="index.php">
+      <a class="navbar-brand title-logo" href="index_login.php">
         <img src="assets/logo-light.png" class="d-inline-block align-top top-icon" alt="">
         CARARIJA
       </a>
@@ -46,11 +48,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mr-5">
-            <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index_login.php">HOME<span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item mr-5">
-            <a class="nav-link" href="index.php">LINK</a>
+            <a class="nav-link" href="">LINK</a>
           </li>
           
             <li class="nav-item dropdown active">
@@ -69,10 +71,11 @@
       
     </nav>
     <!-- Bootstrap Navbar End  -->
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <form class="well form-horizontal" action="userPage_register.php" method="POST"  id="contact_form">
+      
       <fieldset>
 
-      <div class="registration-form-card">
+      <div class="registration-form-card mb-5">
         <!-- Form Name -->
         <h2 class="mb-4 mt-4">Registration Form</h2>
 
@@ -96,7 +99,7 @@
         <!-- Text input-->
 
         <div class="form-group">
-          <label class="col-md-4 control-label" >Last Name</label> 
+          <label class="col-md-4 control-label">Last Name</label> 
             <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -106,25 +109,35 @@
         </div>
 
           <div class="form-group"> 
-          <label class="col-md-4 control-label">Department / Office</label>
-            <div class="col-md-4 offset-md-4 selectContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-            <select name="department" class="form-control selectpicker">
-              <option value="">Select your Department/Office</option>
-              <option>Department of Engineering</option>
-              <option>Department of Agriculture</option>
-              <option >Accounting Office</option>
-              <option >Tresurer's Office</option>
-              <option >MPDC</option>
-              <option >MCTC</option>
-              <option >MCR</option>
-              <option >Mayor's Office</option>
-              <option >Tourism Office</option>
-            </select>
+            <label class="col-md-4 control-label">Faculty</label>
+                <div class="col-md-4 offset-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <select name="department" class="form-control selectpicker">
+                  <option value="">Select your Department/Office</option>
+                  <option>Engineering</option>
+                  <option>Economy</option>
+                  <option>Computer Science</option>
+                  <option>Public Health</option>
+                  <option>Social Politic & Humanities</option>
+                  <option>Mathematics & Natural Science</option>
+                  <option>Vocational Studies</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          
+        <div class="form-group">
+          <label class="col-md-4 control-label">Major</label>  
+          <div class="col-md-4 offset-md-4 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input  name="major" placeholder="Your Major" class="form-control"  type="text"  >
+            </div>
           </div>
         </div>
-        </div>
+
           
         <!-- Text input-->
 
@@ -133,7 +146,7 @@
           <div class="col-md-4 offset-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input  name="user_name" placeholder="Username" class="form-control"  type="text">
+          <input  name="post_username" class="form-control"  type="text" readonly value="<?=$username?>" style="opacity: 30%">
             </div>
           </div>
         </div>
@@ -145,19 +158,7 @@
             <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="user_password" placeholder="Password" class="form-control"  type="password">
-            </div>
-          </div>
-        </div>
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label" >Confirm Password</label> 
-            <div class="col-md-4 offset-md-4 inputGroupContainer">
-            <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
+          <input name="user_password" placeholder="Password" class="form-control"  type="password" readonly value="<?=$password?>" style="opacity: 30%">
             </div>
           </div>
         </div>
@@ -168,7 +169,7 @@
             <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" readonly value="<?=$email?>" style="opacity: 30%;">
             </div>
           </div>
         </div>
@@ -181,22 +182,22 @@
             <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-          <input name="contact_no" placeholder="(639)" class="form-control" type="text">
+          <input name="contact_no" placeholder="Phone Number" class="form-control" type="text">
             </div>
           </div>
         </div>
 
         <!-- Button -->
         <div class="form-group">
-          <button class="btn my-btn-login btn-size" type="button"> Submit </button>
+          <button class="btn my-btn-login btn-size"> Submit </button>
         </div>
 
         <a href="" class="mb-3" style="color: #9d73dd;">Complete later</a>
-
         </fieldset>
-        </form>
 
-      </div>
+    
+
+    </div>
       
       
   </div>
@@ -204,7 +205,7 @@
 <script>
 
 $(document).ready(function(){
-  var middlename = '<div class="form-group" id="middlename-div"> <label class="col-md-4 control-label">Middle Name</label> <div class="col-md-4 offset-md-4 inputGroupContainer"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  name="user_name" placeholder="Middle name" class="form-control"  type="text"></div></div></div>'
+  var middlename = '<div class="form-group" id="middlename-div"> <label class="col-md-4 control-label">Middle Name</label> <div class="col-md-4 offset-md-4 inputGroupContainer"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  name="middlename" placeholder="Middle name" class="form-control"  type="text"></div></div></div>'
   $("#customCheck").on('change', e=>{
     if($(e.target).is(':checked'))
     {

@@ -85,7 +85,8 @@
         <span>or use E-Mail</span>
         <input type="text" placeholder="Username" id="register_name" name="post_username" required>
         <input type="email" placeholder="E-mail" id="register_email" name="post_email" required>
-        <input type="password" placeholder="Password" id="register_password">
+        <input type="password" placeholder="Password" id="register_password" name="post_password" required>
+        <input type="password" placeholder="Confirm Password" id="register_confirm_password" required>
         <button id="register_btn">Sign Up</button>
       </form>
     </div>
@@ -210,14 +211,24 @@
       })
 
       $("#register_btn").click(function(e){
-        var err_msg_reg = '<div class="error-notification" id="error-notification-register"> Please input all forms</div>';
+        var err_msg_reg = '<div class="error-notification" id="error-notification-register">Please input all forms</div>';
         reg_username = $("#register_name").val();
         reg_email = $("#register_email").val();
+        reg_password = $("#register_password").val();
+        reg_confirm = $("#register_confirm_password").val();
         reg_password = $("#register_password").val();
         if(reg_username == "" || reg_email == "" || reg_password == "")
         {
           $("#error-notification-register").remove();
-          $("#register_password").after(err_msg_reg);
+          $("#register_confirm_password").after(err_msg_reg);
+        }
+
+        if(reg_password != reg_confirm)
+        {
+          $("#error-notification-register").remove();
+          err_msg_reg = '<div class="error-notification" id="error-notification-register">Password does not match</div>';
+          $("#register_confirm_password").after(err_msg_reg);
+          e.preventDefault();
         }
       });
 
