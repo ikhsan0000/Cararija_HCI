@@ -132,3 +132,26 @@ body
     -webkit-transform:translateX(-1500px);
     -moz-transform:translateX(-1500px);
 }
+
+.dropdown-item
+{
+    color:  #d4d4d4;;
+}
+
+.dropdown-item:hover
+{
+    background-color: #483e52;
+    color: blanchedalmond;
+}
+
+.dropdown-menu.show
+{
+    background-color: #282830;
+}
+
+.dropdown-divider
+{
+    color: rgb(117, 117, 117);
+    border: rgb(117, 117, 117) solid 1px;
+    margin: 4px 7px;
+}

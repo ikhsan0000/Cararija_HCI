@@ -17,6 +17,7 @@
 
       <!-- JQ -->
       <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -59,7 +60,7 @@
     
     <img src="assets/logo2.png" alt="logo" class="logo-bg inline-flex">
 
-    <button type="button" class="btn my-btn-explore">
+    <button type="button" class="btn my-btn-explore" id=explore>
       <span class="explore-text">Explore Now</span>
     </button>
 
@@ -87,7 +88,7 @@
     </div>
 
     <div class="form-container login-container">
-      <form onsubmit="loginFunc()">
+      <form>
         <h1>Login</h1>
         <div class="social-container">
           <a href="https://www.facebook.com" target="_blank" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -95,9 +96,8 @@
           <a href="https://accounts.google.com/login" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use E-Mail</span>
-        <input type="email" placeholder="E-mail" id="login_email" required>
-        <input type="password" placeholder="Password" id="login_password" required>
-        <div class="error-notification">Please Input Your Email/Password</div>
+        <input type="email" placeholder="E-mail" id="login_email">
+        <input type="password" placeholder="Password" id="login_password">
         <a href="#">Forgot your password?</a>
         <button id="login_btn">Login</button>
       </form>  
@@ -133,7 +133,7 @@
 
   <script>
  
-    $("#login-btn, #register-btn").click(function(){
+    $("#login-btn, #register-btn, #explore").click(function(){
       $('#login-layout').removeAttr("style");
       $("#home-page").addClass('swipe-left')
       $("#home-page").animate({opacity: 0}, 300)
@@ -154,17 +154,18 @@
     $("#signup").click(function(){
       $("#login-layout").addClass("right-panel-active")
     });
-    $("#login").click(function(){
+    $("#login, #explore").click(function(){
       $("#login-layout").removeClass("right-panel-active")
     });
 
     $("#register-btn").click(function(){
       $("#login-layout").addClass("right-panel-active");
     })
+    $("#login-btn, #explore").click(function(){
+      $("#login-layout").removeClass("right-panel-active");
+    })
 
     // LOGIN & REGISTER
-
-    console.log($("#login_password").get(0));
 
     function loginFunc()
     {
@@ -182,7 +183,6 @@
         }
         else
         {
-          console.log("salah jing");
           console.log(login_email);
           console.log(password_id);
         }
@@ -195,19 +195,38 @@
         e.preventDefault();
         var login_email = $("#login_email").val();
         var password_id = $("#login_password").val();
+        var err_msg = '<div class="error-notification" id="error-notification">';
 
         if(login_email == "cararija@gmail.com" && password_id == "admin123")
         {
           console.log(login_email);
           console.log(password_id);
-          window.location.replace("userPage.html")
+          window.location.replace("userPage.php");
 
+        }
+        else if(login_email === "" || password_id === "")
+        {
+          err_msg = err_msg+"Please Input Your Email/Password</div>";
+          $("#error-notification").remove();
+          $("#login_password").after(err_msg);
+          console.log(err_msg);
         }
         else
         {
-          
+          err_msg = err_msg+"Wrong Email/Password, Please try again</div>";
+          $("#error-notification").remove();
+          $("#login_password").after(err_msg);
+          console.log(err_msg);
         }
+
       });
+
+    $("#explore").click(function(e){
+      e.preventDefault();
+      var err_msg = '<div class="error-notification" id="error-notification"> Please Login First !</div>';
+      $("#error-notification").remove();
+      $("#login_password").after(err_msg);
+    })
 
     // REGISTER ACTION
       $("#register_btn").click(function(e){
@@ -216,6 +235,9 @@
       });
 
     });
+
+
+
     
 
   </script>
