@@ -74,11 +74,11 @@
 
       <div class="registration-form-card">
         <!-- Form Name -->
-        <h2>Registration Form</h2>
+        <h2 class="mb-5">Registration Form</h2>
 
         <!-- Text input-->
 
-        <div class="form-group">
+        <div class="form-group" id="firstname-div">
           <label class="col-md-4 control-label">First Name</label>  
           <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
@@ -86,6 +86,11 @@
               <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
             </div>
           </div>
+        </div>
+
+        <div class="custom-control custom-checkbox mb-4" style="margin-top: -15px">
+          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+          <label class="custom-control-label" for="customCheck">Need Middle Name?</label>
         </div>
 
         <!-- Text input-->
@@ -183,8 +188,10 @@
 
         <!-- Button -->
         <div class="form-group">
-          <button class="my-btn-login" type="button"> Submit </button>
+          <button class="btn my-btn-login btn-size" type="button"> Submit </button>
         </div>
+
+        <a href="" class="mb-3" style="color: #9d73dd;">Complete later</a>
 
         </fieldset>
         </form>
@@ -193,6 +200,21 @@
       
       
   </div>
+
+<script>
+
+$(document).ready(function(){
+  var middlename = '<div class="form-group" id="middlename-div"> <label class="col-md-4 control-label">Middle Name</label> <div class="col-md-4 offset-md-4 inputGroupContainer"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  name="user_name" placeholder="Middle name" class="form-control"  type="text"></div></div></div>'
+  $("#customCheck").on('change', e=>{
+    console.log(e);
+  });
+  
+
+});
+
+  
+  
+</script>
 
 </body>
 </html>

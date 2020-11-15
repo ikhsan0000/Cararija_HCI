@@ -203,7 +203,7 @@
         <?php endfor; ?>
         
     </div>
-    <p style="font-size: 15px; item-align: center; text-align: center">Dst . . .</p>
+    <p style="font-size: 15px; text-align: center">Dst . . .</p>
   </div>
     
     <script type="text/javascript">

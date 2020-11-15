@@ -22,6 +22,14 @@ fieldset
     height: 35px;
 }
 
+.input-group select.form-control.selectpicker
+{
+    background-color: #3a383d;
+    border: none;
+    color: #d1d1d1;
+    height: 35px;
+}
+
 .registration-form-card
 {
     align-items: center;
@@ -32,5 +40,4 @@ fieldset
     padding: 10px 0;
     width: 1000px;
     height: fit-content;
-    background-color: black;
 }
