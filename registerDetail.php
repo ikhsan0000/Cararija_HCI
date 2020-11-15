@@ -74,11 +74,11 @@
 
       <div class="registration-form-card">
         <!-- Form Name -->
-        <h2 class="mb-5">Registration Form</h2>
+        <h2 class="mb-4 mt-4">Registration Form</h2>
 
         <!-- Text input-->
 
-        <div class="form-group" id="firstname-div">
+        <div class="form-group" >
           <label class="col-md-4 control-label">First Name</label>  
           <div class="col-md-4 offset-md-4 inputGroupContainer">
             <div class="input-group">
@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <div class="custom-control custom-checkbox mb-4" style="margin-top: -15px">
+        <div class="custom-control custom-checkbox mb-4" id="firstname-div" style="margin-top: -15px">
           <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
           <label class="custom-control-label" for="customCheck">Need Middle Name?</label>
         </div>
@@ -206,7 +206,14 @@
 $(document).ready(function(){
   var middlename = '<div class="form-group" id="middlename-div"> <label class="col-md-4 control-label">Middle Name</label> <div class="col-md-4 offset-md-4 inputGroupContainer"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input  name="user_name" placeholder="Middle name" class="form-control"  type="text"></div></div></div>'
   $("#customCheck").on('change', e=>{
-    console.log(e);
+    if($(e.target).is(':checked'))
+    {
+      $("#firstname-div").after(middlename)
+    }
+    else
+    {
+      $("#middlename-div").remove();
+    }
   });
   
 
