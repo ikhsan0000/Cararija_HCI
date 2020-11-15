@@ -8,15 +8,39 @@ Created by
 ## Description
 CaRaRiJa (Cari Kerja Rileks Aja) merupakan aplikasi job finder yang dapat digunakan user untuk mencari pekerjaan. Aplikasi ini dapat digunakan untuk mencari berbagai jenis pekerjaan, mulai dari pekerjaan sampingan kecil seperti part time menjadi pelayan di sebuah kafe, sampai dengan kegiatan magang di perusahaan-perusahaan besar. User dapat memfilter pekerjaan berdasarkan bidang, skill, lokasi, durasi pekerjaan, dan tipe employment (seperti part-time, full-time, internship). Perusahaan juga dapat menambahkan lowongan pekerjaan yang tersedia ke aplikasi ini. Aplikasi ini diharapkan dapat membantu mahasiswa dalam mencari pekerjaan untuk mencari tambahan sampingan atau untuk keperluan kerja praktik. Selain itu aplikasi ini juga diharapkan dapat membantu perusahaan untuk mendapatkan tenaga kerja yang berkualitas.
 
-Programs used: XAMPP
+Programs used: XAMPP, Visual Studio Code
 
-Based on: 
+Based on: HTML, CSS, JavaScript, PHP
 
 ## Screenshot Tampilan Web
+Laman awal
 
+
+Laman login
+![Login](Screenshot/Login.png)
+
+Laman signup
+![Signup](Screenshot/Signup.png)
+
+Laman signup form penuh
+![SignupComplete](Screenshot/SignupComplete.png)
+
+Laman page utama
+![Job](Screenshot/Job.png)
+
+Laman filter pekerjaan
+![JobFilter](Screenshot/JobFilter.png)
 
 ## Installation
-
+Berikut cara untuk menjalankan program ini:
+1. Install XAMPP yang mendukung PHP 5 ke atas (seperti XAMPP v3.2.4).
+2. Navigasi ke direktori lokal XAMPP (secara default berada pada C:\xampp\htdocs).
+3. Buat folder dengan nama "Cariraja".
+4. Unduh semua file pada repository ini.
+5. Letakkan keseluruhan file pada flder "Cariraja" yang dibuat sebelumnya.
+6. Jalankan XAMPP dan nyalakan module Apache.
+7. Masukan http://localhost/Cariraja/ pada URL bar browser yang digunakan.
+8. Jika berhasil akan muncul tampilan seperti berikut.
 
 ## License
 <details>
