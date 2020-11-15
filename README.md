@@ -8,6 +8,8 @@ Created by
 ## Description
 CaRaRiJa (Cari Kerja Rileks Aja) merupakan aplikasi job finder yang dapat digunakan user untuk mencari pekerjaan. Aplikasi ini dapat digunakan untuk mencari berbagai jenis pekerjaan, mulai dari pekerjaan sampingan kecil seperti part time menjadi pelayan di sebuah kafe, sampai dengan kegiatan magang di perusahaan-perusahaan besar. User dapat memfilter pekerjaan berdasarkan bidang, skill, lokasi, durasi pekerjaan, dan tipe employment (seperti part-time, full-time, internship). Perusahaan juga dapat menambahkan lowongan pekerjaan yang tersedia ke aplikasi ini. Aplikasi ini diharapkan dapat membantu mahasiswa dalam mencari pekerjaan untuk mencari tambahan sampingan atau untuk keperluan kerja praktik. Selain itu aplikasi ini juga diharapkan dapat membantu perusahaan untuk mendapatkan tenaga kerja yang berkualitas.
 
+Desain yang dibuat menggunakan warna yang gelap agar mata dapat selalu merasa nyaman saat mengakses konten pada web app ini. Animasi yang digunakan sederhana namun menarik. Selain itu, tampilan web tidak dipenuhi oleh text yang terlalu banyak. Pewarnaan pada button menerapkan konsep hierarchichal agar user dapat membedakan fungsi button dengan mudah. Fitur filter menggunakan sidebar yang bisa disembunyikan agar tidak memenuhi layar dengan informasi yang terlalu banyak.
+
 Programs used: XAMPP, Visual Studio Code
 
 Based on: HTML, CSS, JavaScript, PHP
