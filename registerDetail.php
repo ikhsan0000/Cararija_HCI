@@ -192,7 +192,7 @@
           <button class="btn my-btn-login btn-size"> Submit </button>
         </div>
 
-        <a href="" class="mb-3" style="color: #9d73dd;">Complete later</a>
+        <a href="index_login.php" class="mb-3" style="color: #9d73dd;">Complete later</a>
         </fieldset>
 
     
